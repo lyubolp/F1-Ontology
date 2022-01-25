@@ -1,2 +1,3 @@
 # F1-Ontology
-F1 ontology
+An ontology, representing the world of F1 !
+
