@@ -1,4 +1,5 @@
 from owlready2 import *
+
 onto = get_ontology("file://f1_onto.owl")
 
 with onto:
@@ -29,10 +30,10 @@ with onto:
     class Driver(Thing): pass
 
 
-    class RookieDriver(Personnel): pass
+    class RookieDriver(Driver): pass
 
 
-    class ReserveDriver(Personnel): pass
+    class ReserveDriver(Driver): pass
 
 
     class PayDriver(Driver): pass
@@ -47,6 +48,9 @@ with onto:
     class Race(Session): pass
 
 
+    class is_wcc(Constructor >> Season): pass
+
+
     class drives_for(FunctionalProperty, Driver >> Constructor): pass
 
 
@@ -57,6 +61,7 @@ with onto:
 
 
     class drived_for(Driver >> Constructor): pass
+
 
     class works_for(FunctionalProperty, Personnel >> Constructor): pass
 
@@ -79,9 +84,6 @@ with onto:
     class is_wdc(Driver >> Season): pass
 
 
-    class is_wcc(Constructor >> Season): pass
-
-
     class supplies(EngineSupplier >> Constructor): pass
 
 
@@ -94,9 +96,12 @@ with onto:
 
     class qualy_at(FunctionalProperty, Qualifying >> Circuit): pass
 
+
     class qualy_for(FunctionalProperty, Qualifying >> Race): pass
 
+
     class part_of(FunctionalProperty, Race >> Season): pass
+
 
     class supplies_tyres(TyreManufacturer >> Constructor): pass
 
@@ -108,6 +113,7 @@ with onto:
     class ReserveDriver(Thing):
         equivalent_to = [reserve_driver_for.some(Constructor)]
 
+
     class TeamPrincipal(Personnel):
         equivalent_to = [Personnel & works_for.some(Constructor)]
 
@@ -118,21 +124,19 @@ with onto:
 
     current_season = Season("2021")
 
+
     class Race(Thing):
         equivalent_to = [Session & race_at.some(Circuit) & part_of.value(current_season)]
 
+
     class WorldDriversChampion(Driver):
         equivalent_to = [Driver & is_wdc.min(1, Season)]
+
 
     class MultipleWorldDriversChampion(Driver):
         equivalent_to = [Driver & is_wdc.min(2, Season)]
 
 
-    class RookieDriver(Driver):
-        equivalent_to = [Driver & raced_at.exactly(0, Race)]
-
     class PayDriver(Driver):
         equivalent_to = [Driver & sponsored_by.min(1, Company)]
 
-    # AllDisjoint([race_at, qualy_at])
-    # AllDisjoint([Race, Qualifying])

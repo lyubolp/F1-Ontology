@@ -51,7 +51,7 @@ s1961 = Season("1961")
 
 # Circuit
 bahrain = Circuit("Bahrain International Circuit")
-imola = Circuit("Autodromo Enzo e Dino Ferr ari")
+imola = Circuit("Autodromo Enzo e Dino Ferrari")
 algarve = Circuit("Autodromo Internacional do Algarve")
 barcelona = Circuit("Circuit de Barcelona-Catalunya")
 monaco = Circuit("Circuit de Monaco")
