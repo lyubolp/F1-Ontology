@@ -1,0 +1,1662 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://f1_onto.owl"
+         xmlns="file://f1_onto.owl#">
+
+<owl:Ontology rdf:about="file://f1_onto.owl"/>
+
+<owl:ObjectProperty rdf:about="#drives_for">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Constructor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#reserve_driver_for">
+  <rdfs:domain rdf:resource="#ReserveDriver"/>
+  <rdfs:range rdf:resource="#Constructor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#sponsored_by">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Company"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#drived_for">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Constructor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#works_for">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Personnel"/>
+  <rdfs:range rdf:resource="#Constructor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#competes_in_season">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Season"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#got_pole">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Qualifying"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#raced_at">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Race"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#won_race">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Race"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#got_podium">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Race"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_wdc">
+  <rdfs:domain rdf:resource="#Driver"/>
+  <rdfs:range rdf:resource="#Season"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_wcc">
+  <rdfs:domain rdf:resource="#Constructor"/>
+  <rdfs:range rdf:resource="#Season"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#supplies">
+  <rdfs:domain rdf:resource="#EngineSupplier"/>
+  <rdfs:range rdf:resource="#Constructor"/>
+  <owl:inverseOf rdf:resource="#is_supplied_by"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_supplied_by">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Constructor"/>
+  <rdfs:range rdf:resource="#EngineSupplier"/>
+  <owl:inverseOf rdf:resource="#supplies"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#race_at">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Race"/>
+  <rdfs:range rdf:resource="#Circuit"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#qualy_at">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Qualifying"/>
+  <rdfs:range rdf:resource="#Circuit"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#qualy_for">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Qualifying"/>
+  <rdfs:range rdf:resource="#Race"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#part_of">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Race"/>
+  <rdfs:range rdf:resource="#Season"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#supplies_tyres">
+  <rdfs:domain rdf:resource="#TyreManufacturer"/>
+  <rdfs:range rdf:resource="#Constructor"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Personnel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Constructor">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Session">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EngineSupplier">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TyreManufacturer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Circuit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Season">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Driver">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#drives_for"/>
+      <owl:someValuesFrom rdf:resource="#Constructor"/>
+    </owl:Restriction>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#RookieDriver">
+  <rdfs:subClassOf rdf:resource="#Personnel"/>
+  <rdfs:subClassOf rdf:resource="#Driver"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Driver"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#raced_at"/>
+          <owl:onClass rdf:resource="#Race"/>
+          <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#ReserveDriver">
+  <rdfs:subClassOf rdf:resource="#Personnel"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#reserve_driver_for"/>
+      <owl:someValuesFrom rdf:resource="#Constructor"/>
+    </owl:Restriction>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#PayDriver">
+  <rdfs:subClassOf rdf:resource="#Driver"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Driver"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#sponsored_by"/>
+          <owl:onClass rdf:resource="#Company"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#TeamPrincipal">
+  <rdfs:subClassOf rdf:resource="#Personnel"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Personnel"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#works_for"/>
+          <owl:someValuesFrom rdf:resource="#Constructor"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Qualifying">
+  <rdfs:subClassOf rdf:resource="#Session"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Session"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qualy_at"/>
+          <owl:someValuesFrom rdf:resource="#Circuit"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#qualy_for"/>
+          <owl:someValuesFrom rdf:resource="#Race"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Race">
+  <rdfs:subClassOf rdf:resource="#Session"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Session"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#race_at"/>
+          <owl:someValuesFrom rdf:resource="#Circuit"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#part_of"/>
+          <owl:hasValue rdf:resource="#2021"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#WorldDriversChampion">
+  <rdfs:subClassOf rdf:resource="#Driver"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Driver"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#is_wdc"/>
+          <owl:onClass rdf:resource="#Season"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#MultipleWorldDriversChampion">
+  <rdfs:subClassOf rdf:resource="#Driver"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Driver"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#is_wdc"/>
+          <owl:onClass rdf:resource="#Season"/>
+          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<Season rdf:about="#2021">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2022">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2020">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2019">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2018">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2017">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2016">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2015">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2014">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2013">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2012">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2011">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2010">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2008">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2007">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2006">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2005">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2004">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2003">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2002">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2001">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#2000">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1999">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1998">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1997">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1996">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1994">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1993">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1992">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1991">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1988">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1987">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1986">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1985">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1984">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1983">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1982">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1981">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1980">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1979">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1977">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1976">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1975">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1974">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1965">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1964">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Season rdf:about="#1961">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Season>
+
+<Circuit rdf:about="#Bahrain International Circuit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Autodromo Enzo e Dino Ferr ari">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Autodromo Internacional do Algarve">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Circuit de Barcelona-Catalunya">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Circuit de Monaco">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Baku City Circuit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Circuit Paul Ricard">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Red Bull Ring">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Silverstone Circuit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Hungaroring">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Circuit de Spa-Francochamps">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Circuit Park Zandvoort">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Autodromo Nazionale di Monza">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Sochi Autodrom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Istanbul Park">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Circuit of the Americas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Autodromo Hermanos Rodriguez">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Autodromo Jose Carlos Pace">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Losail International Circuit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Jeddah Street Circuit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Circuit rdf:about="#Yas Marina Circuit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Circuit>
+
+<Race rdf:about="#Bahrain Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Bahrain International Circuit"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Emilia Romagna Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Autodromo Enzo e Dino Ferr ari"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Portuguese Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Autodromo Internacional do Algarve"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Spanish Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Circuit de Barcelona-Catalunya"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Monaco Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Circuit de Monaco"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Azerbaijan Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Baku City Circuit"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#French Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Circuit Paul Ricard"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Styrian Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Red Bull Ring"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Austrian Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Red Bull Ring"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#British Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Silverstone Circuit"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Hungarian Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Hungaroring"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Belgium Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Circuit de Spa-Francochamps"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Dutch Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Circuit de Spa-Francochamps"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Italian Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Autodromo Nazionale di Monza"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Russian Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Sochi Autodrom"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Turkish Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Istanbul Park"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#United States Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Circuit of the Americas"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Mexico City Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Autodromo Hermanos Rodriguez"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#São Paulo Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Autodromo Jose Carlos Pace"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Qatar Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Losail International Circuit"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Saudi Arabian Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Jeddah Street Circuit"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Race rdf:about="#Abu Dhabi Grand Prix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <race_at rdf:resource="#Yas Marina Circuit"/>
+  <part_of rdf:resource="#2021"/>
+</Race>
+
+<Qualifying rdf:about="#Bahrain Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Bahrain International Circuit"/>
+  <qualy_for rdf:resource="#Bahrain Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Emilia Romagna Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Autodromo Enzo e Dino Ferr ari"/>
+  <qualy_for rdf:resource="#Emilia Romagna Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Portuguese Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Autodromo Internacional do Algarve"/>
+  <qualy_for rdf:resource="#Portuguese Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Spanish Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Circuit de Barcelona-Catalunya"/>
+  <qualy_for rdf:resource="#Spanish Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Monaco Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Circuit de Monaco"/>
+  <qualy_for rdf:resource="#Monaco Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Azerbaijan Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Baku City Circuit"/>
+  <qualy_for rdf:resource="#Azerbaijan Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#French Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Circuit Paul Ricard"/>
+  <qualy_for rdf:resource="#French Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Styrian Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Red Bull Ring"/>
+  <qualy_for rdf:resource="#Styrian Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Austrian Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Red Bull Ring"/>
+  <qualy_for rdf:resource="#Austrian Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#British Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Silverstone Circuit"/>
+  <qualy_for rdf:resource="#British Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Hungarian Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Hungaroring"/>
+  <qualy_for rdf:resource="#Hungarian Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Belgium Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Circuit de Spa-Francochamps"/>
+  <qualy_for rdf:resource="#Belgium Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Dutch Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Circuit de Spa-Francochamps"/>
+  <qualy_for rdf:resource="#Dutch Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Italian Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Autodromo Nazionale di Monza"/>
+  <qualy_for rdf:resource="#Italian Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Russian Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Sochi Autodrom"/>
+  <qualy_for rdf:resource="#Russian Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Turkish Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Istanbul Park"/>
+  <qualy_for rdf:resource="#Turkish Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#United States Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Circuit of the Americas"/>
+  <qualy_for rdf:resource="#United States Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Mexico City Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Autodromo Hermanos Rodriguez"/>
+  <qualy_for rdf:resource="#Mexico City Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#São Paulo Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Autodromo Jose Carlos Pace"/>
+  <qualy_for rdf:resource="#São Paulo Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Qatar Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Losail International Circuit"/>
+  <qualy_for rdf:resource="#Qatar Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Saudi Arabian Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Jeddah Street Circuit"/>
+  <qualy_for rdf:resource="#Saudi Arabian Grand Prix"/>
+</Qualifying>
+
+<Qualifying rdf:about="#Abu Dhabi Grand Prix Qualy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <qualy_at rdf:resource="#Yas Marina Circuit"/>
+  <qualy_for rdf:resource="#Abu Dhabi Grand Prix"/>
+</Qualifying>
+
+<EngineSupplier rdf:about="#Ferrari">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Constructor"/>
+  <is_supplied_by rdf:resource="#Ferrari"/>
+  <is_wcc rdf:resource="#1979"/>
+  <is_wcc rdf:resource="#2004"/>
+  <is_wcc rdf:resource="#1977"/>
+  <is_wcc rdf:resource="#2003"/>
+  <is_wcc rdf:resource="#1976"/>
+  <is_wcc rdf:resource="#2002"/>
+  <is_wcc rdf:resource="#1975"/>
+  <is_wcc rdf:resource="#2001"/>
+  <is_wcc rdf:resource="#2000"/>
+  <is_wcc rdf:resource="#1965"/>
+  <is_wcc rdf:resource="#1999"/>
+  <is_wcc rdf:resource="#1983"/>
+  <is_wcc rdf:resource="#1964"/>
+  <is_wcc rdf:resource="#2008"/>
+  <is_wcc rdf:resource="#1982"/>
+  <is_wcc rdf:resource="#1961"/>
+  <is_wcc rdf:resource="#2007"/>
+</EngineSupplier>
+
+<EngineSupplier rdf:about="#Mercedes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Constructor"/>
+  <is_supplied_by rdf:resource="#Mercedes"/>
+  <is_wcc rdf:resource="#2020"/>
+  <is_wcc rdf:resource="#2016"/>
+  <is_wcc rdf:resource="#2015"/>
+  <is_wcc rdf:resource="#2018"/>
+  <is_wcc rdf:resource="#2014"/>
+  <is_wcc rdf:resource="#2021"/>
+  <is_wcc rdf:resource="#2017"/>
+  <is_wcc rdf:resource="#2019"/>
+</EngineSupplier>
+
+<EngineSupplier rdf:about="#Red Bull">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Constructor"/>
+  <is_supplied_by rdf:resource="#Red Bull"/>
+  <is_wcc rdf:resource="#2013"/>
+  <is_wcc rdf:resource="#2010"/>
+  <is_wcc rdf:resource="#2011"/>
+  <is_wcc rdf:resource="#2012"/>
+</EngineSupplier>
+
+<EngineSupplier rdf:about="#Renault">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</EngineSupplier>
+
+<Constructor rdf:about="#Alfa Romeo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Ferrari"/>
+</Constructor>
+
+<Constructor rdf:about="#Alpha Tauri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Red Bull"/>
+</Constructor>
+
+<Constructor rdf:about="#Alpine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Renault"/>
+  <is_wcc rdf:resource="#2005"/>
+  <is_wcc rdf:resource="#2006"/>
+</Constructor>
+
+<Constructor rdf:about="#Aston Martin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Mercedes"/>
+</Constructor>
+
+<Constructor rdf:about="#Haas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Ferrari"/>
+</Constructor>
+
+<Constructor rdf:about="#McLaren">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Mercedes"/>
+  <is_wcc rdf:resource="#1984"/>
+  <is_wcc rdf:resource="#1991"/>
+  <is_wcc rdf:resource="#1986"/>
+  <is_wcc rdf:resource="#1985"/>
+  <is_wcc rdf:resource="#1998"/>
+  <is_wcc rdf:resource="#1988"/>
+  <is_wcc rdf:resource="#1974"/>
+</Constructor>
+
+<Constructor rdf:about="#Williams">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <is_supplied_by rdf:resource="#Mercedes"/>
+  <is_wcc rdf:resource="#1992"/>
+  <is_wcc rdf:resource="#1996"/>
+  <is_wcc rdf:resource="#1997"/>
+  <is_wcc rdf:resource="#1987"/>
+  <is_wcc rdf:resource="#1994"/>
+  <is_wcc rdf:resource="#1981"/>
+  <is_wcc rdf:resource="#1986"/>
+  <is_wcc rdf:resource="#1993"/>
+  <is_wcc rdf:resource="#1980"/>
+</Constructor>
+
+<TyreManufacturer rdf:about="#Pirelli">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <supplies_tyres rdf:resource="#McLaren"/>
+  <supplies_tyres rdf:resource="#Haas"/>
+  <supplies_tyres rdf:resource="#Mercedes"/>
+  <supplies_tyres rdf:resource="#Williams"/>
+  <supplies_tyres rdf:resource="#Red Bull"/>
+  <supplies_tyres rdf:resource="#Alfa Romeo"/>
+  <supplies_tyres rdf:resource="#Ferrari"/>
+  <supplies_tyres rdf:resource="#Aston Martin"/>
+  <supplies_tyres rdf:resource="#Alpha Tauri"/>
+  <supplies_tyres rdf:resource="#Alpine"/>
+</TyreManufacturer>
+
+<Company rdf:about="#Uralkali">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Company>
+
+<Company rdf:about="#Lavazza">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Company>
+
+<Driver rdf:about="#Guanyu Zhou">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Alfa Romeo"/>
+</Driver>
+
+<Driver rdf:about="#Valtteri Bottas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Alfa Romeo"/>
+  <drived_for rdf:resource="#Mercedes"/>
+  <drived_for rdf:resource="#Williams"/>
+  <got_podium rdf:resource="#Bahrain Grand Prix"/>
+  <got_podium rdf:resource="#Spanish Grand Prix"/>
+  <got_podium rdf:resource="#Portuguese Grand Prix"/>
+  <got_podium rdf:resource="#Styrian Grand Prix"/>
+  <got_pole rdf:resource="#Mexico City Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Turkish Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Portuguese Grand Prix Qualy"/>
+  <got_pole rdf:resource="#São Paulo Grand Prix Qualy"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <won_race rdf:resource="#Turkish Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Pierre Gasly">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Alpha Tauri"/>
+  <drived_for rdf:resource="#Red Bull"/>
+  <got_podium rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Yuki Tsonoda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Alpha Tauri"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Fernando Alonso">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Alpine"/>
+  <drived_for rdf:resource="#McLaren"/>
+  <drived_for rdf:resource="#Ferrari"/>
+  <got_podium rdf:resource="#Qatar Grand Prix"/>
+  <is_wdc rdf:resource="#2005"/>
+  <is_wdc rdf:resource="#2006"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Esteban Ocon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Alpine"/>
+  <drived_for rdf:resource="#Aston Martin"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <won_race rdf:resource="#Hungarian Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Sebastian Vettel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Aston Martin"/>
+  <drived_for rdf:resource="#Red Bull"/>
+  <drived_for rdf:resource="#Alpha Tauri"/>
+  <drived_for rdf:resource="#Ferrari"/>
+  <got_podium rdf:resource="#Azerbaijan Grand Prix"/>
+  <is_wdc rdf:resource="#2013"/>
+  <is_wdc rdf:resource="#2010"/>
+  <is_wdc rdf:resource="#2011"/>
+  <is_wdc rdf:resource="#2012"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Lance Stroll">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Aston Martin"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Charles Leclerc">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Ferrari"/>
+  <drived_for rdf:resource="#Alfa Romeo"/>
+  <got_podium rdf:resource="#British Grand Prix"/>
+  <got_pole rdf:resource="#Monaco Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Azerbaijan Grand Prix Qualy"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Carlos Sainz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Ferrari"/>
+  <drived_for rdf:resource="#McLaren"/>
+  <drived_for rdf:resource="#Alpha Tauri"/>
+  <drived_for rdf:resource="#Alpine"/>
+  <got_podium rdf:resource="#Russian Grand Prix"/>
+  <got_podium rdf:resource="#Monaco Grand Prix"/>
+  <got_podium rdf:resource="#Hungarian Grand Prix"/>
+  <got_podium rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Nikita Mazepin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Haas"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <sponsored_by rdf:resource="#Uralkali"/>
+</Driver>
+
+<Driver rdf:about="#Mick Schumacher">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Haas"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Daniel Ricciardo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#McLaren"/>
+  <drived_for rdf:resource="#Red Bull"/>
+  <drived_for rdf:resource="#Alpha Tauri"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <won_race rdf:resource="#Italian Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Lando Norris">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#McLaren"/>
+  <got_podium rdf:resource="#Austrian Grand Prix"/>
+  <got_podium rdf:resource="#Monaco Grand Prix"/>
+  <got_podium rdf:resource="#Emilia Romagna Grand Prix"/>
+  <got_podium rdf:resource="#Italian Grand Prix"/>
+  <got_pole rdf:resource="#Russian Grand Prix Qualy"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Lewis Hamilton">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Mercedes"/>
+  <drived_for rdf:resource="#McLaren"/>
+  <got_podium rdf:resource="#United States Grand Prix"/>
+  <got_podium rdf:resource="#French Grand Prix"/>
+  <got_podium rdf:resource="#Mexico City Grand Prix"/>
+  <got_podium rdf:resource="#Styrian Grand Prix"/>
+  <got_podium rdf:resource="#Hungarian Grand Prix"/>
+  <got_podium rdf:resource="#Abu Dhabi Grand Prix"/>
+  <got_podium rdf:resource="#Belgium Grand Prix"/>
+  <got_podium rdf:resource="#Dutch Grand Prix"/>
+  <got_podium rdf:resource="#Emilia Romagna Grand Prix"/>
+  <got_pole rdf:resource="#Saudi Arabian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Spanish Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Qatar Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Hungarian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Emilia Romagna Grand Prix Qualy"/>
+  <is_wdc rdf:resource="#2008"/>
+  <is_wdc rdf:resource="#2014"/>
+  <is_wdc rdf:resource="#2020"/>
+  <is_wdc rdf:resource="#2017"/>
+  <is_wdc rdf:resource="#2015"/>
+  <is_wdc rdf:resource="#2019"/>
+  <is_wdc rdf:resource="#2018"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <won_race rdf:resource="#Spanish Grand Prix"/>
+  <won_race rdf:resource="#Russian Grand Prix"/>
+  <won_race rdf:resource="#Saudi Arabian Grand Prix"/>
+  <won_race rdf:resource="#São Paulo Grand Prix"/>
+  <won_race rdf:resource="#British Grand Prix"/>
+  <won_race rdf:resource="#Qatar Grand Prix"/>
+  <won_race rdf:resource="#Bahrain Grand Prix"/>
+  <won_race rdf:resource="#Portuguese Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#George Russell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Mercedes"/>
+  <drived_for rdf:resource="#Williams"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Max Verstappen">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Red Bull"/>
+  <drived_for rdf:resource="#Alpha Tauri"/>
+  <got_podium rdf:resource="#Spanish Grand Prix"/>
+  <got_podium rdf:resource="#Russian Grand Prix"/>
+  <got_podium rdf:resource="#Turkish Grand Prix"/>
+  <got_podium rdf:resource="#Saudi Arabian Grand Prix"/>
+  <got_podium rdf:resource="#São Paulo Grand Prix"/>
+  <got_podium rdf:resource="#Qatar Grand Prix"/>
+  <got_podium rdf:resource="#Bahrain Grand Prix"/>
+  <got_podium rdf:resource="#Portuguese Grand Prix"/>
+  <got_pole rdf:resource="#Portuguese Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Spanish Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Monaco Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Azerbaijan Grand Prix Qualy"/>
+  <got_pole rdf:resource="#French Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Styrian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Austrian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#British Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Hungarian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Belgium Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Dutch Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Italian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Russian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Bahrain Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Turkish Grand Prix Qualy"/>
+  <got_pole rdf:resource="#United States Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Mexico City Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Saudi Arabian Grand Prix Qualy"/>
+  <got_pole rdf:resource="#São Paulo Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Emilia Romagna Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Qatar Grand Prix Qualy"/>
+  <got_pole rdf:resource="#Abu Dhabi Grand Prix Qualy"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <is_wdc rdf:resource="#2021"/>
+  <won_race rdf:resource="#Monaco Grand Prix"/>
+  <won_race rdf:resource="#United States Grand Prix"/>
+  <won_race rdf:resource="#French Grand Prix"/>
+  <won_race rdf:resource="#Mexico City Grand Prix"/>
+  <won_race rdf:resource="#Styrian Grand Prix"/>
+  <won_race rdf:resource="#Austrian Grand Prix"/>
+  <won_race rdf:resource="#Abu Dhabi Grand Prix"/>
+  <won_race rdf:resource="#Belgium Grand Prix"/>
+  <won_race rdf:resource="#Dutch Grand Prix"/>
+  <won_race rdf:resource="#Emilia Romagna Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Sergio Perez">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Red Bull"/>
+  <drived_for rdf:resource="#McLaren"/>
+  <drived_for rdf:resource="#Aston Martin"/>
+  <drived_for rdf:resource="#Alfa Romeo"/>
+  <got_podium rdf:resource="#United States Grand Prix"/>
+  <got_podium rdf:resource="#French Grand Prix"/>
+  <got_podium rdf:resource="#Mexico City Grand Prix"/>
+  <got_podium rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <won_race rdf:resource="#Azerbaijan Grand Prix"/>
+</Driver>
+
+<Driver rdf:about="#Nicholas Latifi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Williams"/>
+  <raced_at rdf:resource="#Spanish Grand Prix"/>
+  <raced_at rdf:resource="#Monaco Grand Prix"/>
+  <raced_at rdf:resource="#Azerbaijan Grand Prix"/>
+  <raced_at rdf:resource="#French Grand Prix"/>
+  <raced_at rdf:resource="#Styrian Grand Prix"/>
+  <raced_at rdf:resource="#Austrian Grand Prix"/>
+  <raced_at rdf:resource="#British Grand Prix"/>
+  <raced_at rdf:resource="#Hungarian Grand Prix"/>
+  <raced_at rdf:resource="#Belgium Grand Prix"/>
+  <raced_at rdf:resource="#Dutch Grand Prix"/>
+  <raced_at rdf:resource="#Italian Grand Prix"/>
+  <raced_at rdf:resource="#Russian Grand Prix"/>
+  <raced_at rdf:resource="#Turkish Grand Prix"/>
+  <raced_at rdf:resource="#United States Grand Prix"/>
+  <raced_at rdf:resource="#Mexico City Grand Prix"/>
+  <raced_at rdf:resource="#Saudi Arabian Grand Prix"/>
+  <raced_at rdf:resource="#São Paulo Grand Prix"/>
+  <raced_at rdf:resource="#Qatar Grand Prix"/>
+  <raced_at rdf:resource="#Abu Dhabi Grand Prix"/>
+  <raced_at rdf:resource="#Bahrain Grand Prix"/>
+  <raced_at rdf:resource="#Portuguese Grand Prix"/>
+  <raced_at rdf:resource="#Emilia Romagna Grand Prix"/>
+  <sponsored_by rdf:resource="#Lavazza"/>
+</Driver>
+
+<Driver rdf:about="#Alexander Albon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <competes_in_season rdf:resource="#2022"/>
+  <drives_for rdf:resource="#Williams"/>
+  <drived_for rdf:resource="#Red Bull"/>
+  <drived_for rdf:resource="#Alpha Tauri"/>
+</Driver>
+
+<ReserveDriver rdf:about="#Sebastien Buemi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <reserve_driver_for rdf:resource="#Red Bull"/>
+</ReserveDriver>
+
+<ReserveDriver rdf:about="#Antonio Giovinazzi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <reserve_driver_for rdf:resource="#Ferrari"/>
+</ReserveDriver>
+
+<ReserveDriver rdf:about="#Oscar Piastri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <reserve_driver_for rdf:resource="#Alpine"/>
+</ReserveDriver>
+
+<TeamPrincipal rdf:about="#Frederic Vasseur">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Alfa Romeo"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Franz Tost">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Alpha Tauri"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Davide Brivio">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Alpine"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Mike Krack">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Aston Martin"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Matia Binotto">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Ferrari"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Guenther Steiner">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Haas"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Andreas Seidl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#McLaren"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Toto Wolf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Mercedes"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Christian Horner">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Red Bull"/>
+</TeamPrincipal>
+
+<TeamPrincipal rdf:about="#Jost Capito">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <works_for rdf:resource="#Williams"/>
+</TeamPrincipal>
+
+
+</rdf:RDF>
