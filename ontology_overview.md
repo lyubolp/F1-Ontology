@@ -18,44 +18,56 @@
 
 ## Класове:
 
-- Person
+### Атомарни класове:
+
+- Personnel
+- Country
 - Company
-- Driver
-- Reserve Driver 
-- Pay Driver 
-- Team Principal
 - Constructor
-- Season
-- Qualifiying
-- Race
+- Session
+- Engine Supplier
+- Tyre manufacturer
 - Circuit
-- Championship
-- World Drivers Champion
-- World Constructors Champion
-- Engine Suplier
-- Works Team
+- Season
+
+### Съставни класове:
+- Driver
+- Rookie Driver
+- Reserve Driver
+- Pay Driver
+- Team Principal
+- Qualifying
+- Race
+- WorldDriversChampion
+- MultipleWorldDriversChampion
 
 ## Свойства:
 
-
-
-| Domain         | Property         | Range       | Characteristics |
-| -------------- | ---------------- | ----------- | --------------- |
-| Driver         | drivesFor        | Constructor |                 |
-| Reserve Driver | reserveDriverFor | Construcotr |                 |
-| Pay Driver     | sponsoredBy      | Company     |                 |
-| Driver         | drivedFor        | Constructor |                 |
-| Person         | workedFor        | Constructor |                 |
-| Person         | worksFor         | Constructor |                 |
-|                | competesInSeason |             |                 |
-|                | gotPole          |             |                 |
-|                | racedAt          |             |                 |
-|                | wonRace          |             |                 |
-|                | gotPodium        |             |                 |
-|                | isWDC            |             |                 |
-|                | isWCC            |             |                 |
-|                | supplies         |             |                 |
-|                | isSuppliedBy     |             |                 |
+| Domain         | Property           | Range          | Characteristics                 |
+| -------------- | ------------------ | -------------- | ------------------------------- |
+| Constructor    | is_wcc             | Season         |                                 |
+| Constructor    | is_supplied_by     | EngineSupplier | Inverse of supplies, Functional |
+| Driver         | competes_in_season | Season         | Functional                      |
+| Driver         | drived_for         | Constructor    |                                 |
+| Driver         | drives_for         | Constructor    | Functional                      |
+| Driver         | got_podium         | Race           |                                 |
+| Driver         | got_pole           | Qualifying     |                                 |
+| Driver         | is_wdc             | Season         |                                 |
+| Driver         | raced_at           | Race           |                                 |
+| Driver         | won_race           | Race           |                                 |
+| EngineSupplier | supplies           | Constructor    | Inverse of isSuppliedBy         |
+| Pay Driver     | sponsored_by       | Company        |                                 |
+| Person         | works_for          | Constructor    | Functional                      |
+| Qualifying     | qualy_at           | Circuit        | Functional                      |
+| Qualifying     | qualy_for          | Race           | Functional                      |
+| Race           | race_at            | Circuit        | Functional                      |
+| Race           | part_of            | Season         | Functional                      |
+| Reserve Driver | reserve_driver_for | Constructor    |                                 |
 
  
 
+# Sources:
+https://www.wikiwand.com/en/2022_Formula_One_World_Championship
+https://www.wikiwand.com/en/2021_Formula_One_World_Championship
+https://www.fpal.org/motorsport/f1/the-test-and-reserve-drivers-for-the-2022-formula-1-season/
+https://www.racing-statistics.com/en

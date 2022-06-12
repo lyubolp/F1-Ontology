@@ -49,6 +49,26 @@ s1965 = Season("1965")
 s1964 = Season("1964")
 s1961 = Season("1961")
 
+# Countries
+austria = Country("Austria")
+australia = Country("Australia")
+canada = Country("Canada")
+china = Country("China")
+denmark = Country("Denmark")
+finland = Country("Finland")
+france = Country("France")
+germany = Country("Germany")
+italy = Country("Italy")
+japan = Country("Japan")
+mexico = Country("Mexico")
+monaco = Country("Monaco")
+netherlands = Country("Netherlands")
+spain = Country("Spain")
+switzerland = Country("Switzerland")
+thailand = Country("Thailand")
+united_kingdom = Country("United Kingdom")
+united_states_of_america = Country("United States of America")
+
 # Circuit
 bahrain = Circuit("Bahrain International Circuit")
 imola = Circuit("Autodromo Enzo e Dino Ferrari")
@@ -66,7 +86,7 @@ monza = Circuit("Autodromo Nazionale di Monza")
 sochi = Circuit("Sochi Autodrom")
 istanbul = Circuit("Istanbul Park")
 cota = Circuit("Circuit of the Americas")
-mexico = Circuit("Autodromo Hermanos Rodriguez")
+mexico_circuit = Circuit("Autodromo Hermanos Rodriguez")
 sao_paulo = Circuit("Autodromo Jose Carlos Pace")
 qatar = Circuit("Losail International Circuit")
 jeddah = Circuit("Jeddah Street Circuit")
@@ -83,45 +103,68 @@ monaco_2021 = Race("Monaco Grand Prix", race_at=monaco, part_of=s2021)
 baku_2021 = Race("Azerbaijan Grand Prix", race_at=baku, part_of=s2021)
 france_2021 = Race("French Grand Prix", race_at=paul_ricard, part_of=s2021)
 styria_2021 = Race("Styrian Grand Prix", race_at=red_bull_ring, part_of=s2021)
-austria_2021 = Race("Austrian Grand Prix", race_at=red_bull_ring, part_of=s2021)
+austria_2021 = Race("Austrian Grand Prix",
+                    race_at=red_bull_ring, part_of=s2021)
 british_2021 = Race("British Grand Prix", race_at=silverstone, part_of=s2021)
-hungarian_2021 = Race("Hungarian Grand Prix", race_at=hungaroring, part_of=s2021)
+hungarian_2021 = Race("Hungarian Grand Prix",
+                      race_at=hungaroring, part_of=s2021)
 belgium_2021 = Race("Belgium Grand Prix", race_at=spa, part_of=s2021)
 netherlands_2021 = Race("Dutch Grand Prix", race_at=spa, part_of=s2021)
 italy_2021 = Race("Italian Grand Prix", race_at=monza, part_of=s2021)
 russia_2021 = Race("Russian Grand Prix", race_at=sochi, part_of=s2021)
 turkey_2021 = Race("Turkish Grand Prix", race_at=istanbul, part_of=s2021)
 us_2021 = Race("United States Grand Prix", race_at=cota, part_of=s2021)
-mexico_2021 = Race("Mexico City Grand Prix", race_at=mexico, part_of=s2021)
+mexico_2021 = Race("Mexico City Grand Prix",
+                   race_at=mexico_circuit, part_of=s2021)
 brazil_2021 = Race("São Paulo Grand Prix", race_at=sao_paulo, part_of=s2021)
 qatar_2021 = Race("Qatar Grand Prix", race_at=qatar, part_of=s2021)
 saudi_2021 = Race("Saudi Arabian Grand Prix", race_at=jeddah, part_of=s2021)
 abu_dhabi_2021 = Race("Abu Dhabi Grand Prix", race_at=abu_dhabi, part_of=s2021)
 
-bahrain_2021_q = Qualifying("Bahrain Grand Prix Qualy", qualy_at=bahrain, qualy_for=bahrain_2021)
-imola_2021_q = Qualifying("Emilia Romagna Grand Prix Qualy", qualy_at=imola, qualy_for=imola_2021)
-portugal_2021_q = Qualifying("Portuguese Grand Prix Qualy", qualy_at=algarve, qualy_for=portugal_2021)
-spain_2021_q = Qualifying("Spanish Grand Prix Qualy", qualy_at=barcelona, qualy_for=spain_2021)
-monaco_2021_q = Qualifying("Monaco Grand Prix Qualy", qualy_at=monaco, qualy_for=monaco_2021)
-baku_2021_q = Qualifying("Azerbaijan Grand Prix Qualy", qualy_at=baku, qualy_for=baku_2021)
-france_2021_q = Qualifying("French Grand Prix Qualy", qualy_at=paul_ricard, qualy_for=france_2021)
-styria_2021_q = Qualifying("Styrian Grand Prix Qualy", qualy_at=red_bull_ring, qualy_for=styria_2021)
-austria_2021_q = Qualifying("Austrian Grand Prix Qualy", qualy_at=red_bull_ring, qualy_for=austria_2021)
-british_2021_q = Qualifying("British Grand Prix Qualy", qualy_at=silverstone, qualy_for=british_2021)
-hungarian_2021_q = Qualifying("Hungarian Grand Prix Qualy", qualy_at=hungaroring, qualy_for=hungarian_2021)
-belgium_2021_q = Qualifying("Belgium Grand Prix Qualy", qualy_at=spa, qualy_for=belgium_2021)
-netherlands_2021_q = Qualifying("Dutch Grand Prix Qualy", qualy_at=spa, qualy_for=netherlands_2021)
-italy_2021_q = Qualifying("Italian Grand Prix Qualy", qualy_at=monza, qualy_for=italy_2021)
-russia_2021_q = Qualifying("Russian Grand Prix Qualy", qualy_at=sochi, qualy_for=russia_2021)
-turkey_2021_q = Qualifying("Turkish Grand Prix Qualy", qualy_at=istanbul, qualy_for=turkey_2021)
-us_2021_q = Qualifying("United States Grand Prix Qualy", qualy_at=cota, qualy_for=us_2021)
-mexico_2021_q = Qualifying("Mexico City Grand Prix Qualy", qualy_at=mexico, qualy_for=mexico_2021)
-brazil_2021_q = Qualifying("São Paulo Grand Prix Qualy", qualy_at=sao_paulo, qualy_for=brazil_2021)
-qatar_2021_q = Qualifying("Qatar Grand Prix Qualy", qualy_at=qatar, qualy_for=qatar_2021)
-saudi_2021_q = Qualifying("Saudi Arabian Grand Prix Qualy", qualy_at=jeddah, qualy_for=saudi_2021)
-abu_dhabi_2021_q = Qualifying("Abu Dhabi Grand Prix Qualy", qualy_at=abu_dhabi, qualy_for=abu_dhabi_2021)
-
-
+bahrain_2021_q = Qualifying(
+    "Bahrain Grand Prix Qualy", qualy_at=bahrain, qualy_for=bahrain_2021)
+imola_2021_q = Qualifying(
+    "Emilia Romagna Grand Prix Qualy", qualy_at=imola, qualy_for=imola_2021)
+portugal_2021_q = Qualifying(
+    "Portuguese Grand Prix Qualy", qualy_at=algarve, qualy_for=portugal_2021)
+spain_2021_q = Qualifying("Spanish Grand Prix Qualy",
+                          qualy_at=barcelona, qualy_for=spain_2021)
+monaco_2021_q = Qualifying("Monaco Grand Prix Qualy",
+                           qualy_at=monaco, qualy_for=monaco_2021)
+baku_2021_q = Qualifying("Azerbaijan Grand Prix Qualy",
+                         qualy_at=baku, qualy_for=baku_2021)
+france_2021_q = Qualifying("French Grand Prix Qualy",
+                           qualy_at=paul_ricard, qualy_for=france_2021)
+styria_2021_q = Qualifying("Styrian Grand Prix Qualy",
+                           qualy_at=red_bull_ring, qualy_for=styria_2021)
+austria_2021_q = Qualifying(
+    "Austrian Grand Prix Qualy", qualy_at=red_bull_ring, qualy_for=austria_2021)
+british_2021_q = Qualifying(
+    "British Grand Prix Qualy", qualy_at=silverstone, qualy_for=british_2021)
+hungarian_2021_q = Qualifying(
+    "Hungarian Grand Prix Qualy", qualy_at=hungaroring, qualy_for=hungarian_2021)
+belgium_2021_q = Qualifying(
+    "Belgium Grand Prix Qualy", qualy_at=spa, qualy_for=belgium_2021)
+netherlands_2021_q = Qualifying(
+    "Dutch Grand Prix Qualy", qualy_at=spa, qualy_for=netherlands_2021)
+italy_2021_q = Qualifying("Italian Grand Prix Qualy",
+                          qualy_at=monza, qualy_for=italy_2021)
+russia_2021_q = Qualifying("Russian Grand Prix Qualy",
+                           qualy_at=sochi, qualy_for=russia_2021)
+turkey_2021_q = Qualifying("Turkish Grand Prix Qualy",
+                           qualy_at=istanbul, qualy_for=turkey_2021)
+us_2021_q = Qualifying("United States Grand Prix Qualy",
+                       qualy_at=cota, qualy_for=us_2021)
+mexico_2021_q = Qualifying(
+    "Mexico City Grand Prix Qualy", qualy_at=mexico_circuit, qualy_for=mexico_2021)
+brazil_2021_q = Qualifying(
+    "São Paulo Grand Prix Qualy", qualy_at=sao_paulo, qualy_for=brazil_2021)
+qatar_2021_q = Qualifying("Qatar Grand Prix Qualy",
+                          qualy_at=qatar, qualy_for=qatar_2021)
+saudi_2021_q = Qualifying("Saudi Arabian Grand Prix Qualy",
+                          qualy_at=jeddah, qualy_for=saudi_2021)
+abu_dhabi_2021_q = Qualifying(
+    "Abu Dhabi Grand Prix Qualy", qualy_at=abu_dhabi, qualy_for=abu_dhabi_2021)
 
 # Engine supplier
 ferrari_engine = EngineSupplier("Ferrari")
@@ -130,24 +173,23 @@ red_bull_engine = EngineSupplier("Red Bull")
 renault_engine = EngineSupplier("Renault")
 
 # Constructors
-alfa_romeo = Constructor("Alfa Romeo", is_supplied_by=ferrari_engine)
-alpha_tauri = Constructor("Alpha Tauri", is_supplied_by=red_bull_engine)
-alpine = Constructor("Alpine", is_supplied_by=renault_engine, is_wcc=[s2006, s2005])
-aston_martin = Constructor("Aston Martin", is_supplied_by=mercedes_engine)
+alfa_romeo = Constructor("Alfa Romeo", is_supplied_by=ferrari_engine, based_in=switzerland)
+alpha_tauri = Constructor("Alpha Tauri", is_supplied_by=red_bull_engine, based_in=italy)
+alpine = Constructor(
+    "Alpine", is_supplied_by=renault_engine, is_wcc=[s2006, s2005], based_in=france)
+aston_martin = Constructor("Aston Martin", is_supplied_by=mercedes_engine, based_in=united_kingdom)
 ferrari = Constructor("Ferrari", is_supplied_by=ferrari_engine,
                       is_wcc=[s2008, s2007, s2004, s2003, s2002, s2001, s2000, s1999, s1983, s1982,
-                              s1979, s1977, s1976, s1975, s1965, s1964, s1961])
-haas = Constructor("Haas", is_supplied_by=ferrari_engine)
+                              s1979, s1977, s1976, s1975, s1965, s1964, s1961], based_in=italy)
+haas = Constructor("Haas", is_supplied_by=ferrari_engine, based_in=united_states_of_america)
 mclaren = Constructor("McLaren", is_supplied_by=mercedes_engine,
-                      is_wcc=[s1998, s1991, s1988, s1986, s1985, s1984, s1974])
+                      is_wcc=[s1998, s1991, s1988, s1986, s1985, s1984, s1974], based_in=united_kingdom)
 mercedes = Constructor("Mercedes", is_supplied_by=mercedes_engine,
-                       is_wcc=[s2021, s2020, s2019, s2018, s2017, s2016, s2015, s2014])
+                       is_wcc=[s2021, s2020, s2019, s2018, s2017, s2016, s2015, s2014], based_in=united_kingdom)
 red_bull = Constructor("Red Bull", is_supplied_by=red_bull_engine,
-                       is_wcc=[s2013, s2012, s2011, s2010])
+                       is_wcc=[s2013, s2012, s2011, s2010], based_in=austria)
 williams = Constructor("Williams", is_supplied_by=mercedes_engine,
-                       is_wcc=[s1997, s1996, s1994, s1993, s1992, s1987, s1986, s1981, s1980])
-
-
+                       is_wcc=[s1997, s1996, s1994, s1993, s1992, s1987, s1986, s1981, s1980], based_in=united_kingdom)
 
 # Tyre supplier
 pirelli = TyreManufacturer("Pirelli", supplies_tyres=[alfa_romeo, alpha_tauri, alpine,
@@ -159,34 +201,76 @@ uralkali = Company("Uralkali")
 lavazza = Company("Lavazza")
 
 # Drivers
-guanyu_zhou = Driver("Guanyu Zhou", competes_in_season=s2022, drives_for=alfa_romeo)
+lewis_hamilton = Driver("Lewis Hamilton", competes_in_season=s2022, drives_for=mercedes,
+                        drived_for=[mclaren],
 
-valtteri_bottas = Driver("Valtteri Bottas", competes_in_season=s2022, drives_for=alfa_romeo,
-                         drived_for=[williams, mercedes],
-                         got_podium=[bahrain_2021, portugal_2021, spain_2021, styria_2021],
-                         got_pole=[portugal_2021_q, turkey_2021_q, mexico_2021_q, brazil_2021_q],
-                         raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
+                        got_podium=[imola_2021,
+                                    france_2021, styria_2021,
+                                    hungarian_2021, belgium_2021, netherlands_2021,
+                                    us_2021, mexico_2021, abu_dhabi_2021],
+                        got_pole=[imola_2021_q, spain_2021_q, hungarian_2021_q, qatar_2021_q,
+                                  saudi_2021_q],
+
+                        is_wdc=[s2008, s2014, s2015,
+                                s2017, s2018, s2019, s2020],
+
+                        raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
                                   baku_2021, france_2021, styria_2021, austria_2021, british_2021,
                                   hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
                                   russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
                                   qatar_2021, saudi_2021, abu_dhabi_2021],
-                         won_race=[turkey_2021])
+
+                        won_race=[bahrain_2021, portugal_2021, spain_2021, british_2021,
+                                  russia_2021, brazil_2021,
+                                  qatar_2021, saudi_2021],
+                        born_in=united_kingdom
+                        )
+george_russell = Driver("George Russell", competes_in_season=s2022, drives_for=mercedes,
+                        drived_for=[williams],
+                        raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
+                                  baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                  hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                  russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                  qatar_2021, saudi_2021, abu_dhabi_2021],
+                        teammate=lewis_hamilton,
+                        born_in=united_kingdom)
+
+guanyu_zhou = Driver("Guanyu Zhou", competes_in_season=s2022,
+                     drives_for=alfa_romeo, born_in=china)
+
+valtteri_bottas = Driver("Valtteri Bottas", competes_in_season=s2022, drives_for=alfa_romeo,
+                         drived_for=[williams, mercedes],
+                         got_podium=[bahrain_2021, portugal_2021,
+                                     spain_2021, styria_2021],
+                         got_pole=[portugal_2021_q, turkey_2021_q,
+                                   mexico_2021_q, brazil_2021_q],
+                         raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
+                                   baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                   hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                   russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                   qatar_2021, saudi_2021, abu_dhabi_2021],
+                         won_race=[turkey_2021],
+                         teammate=guanyu_zhou,
+                         born_in=finland)
 
 pierre_gasly = Driver("Pierre Gasly", competes_in_season=s2022, drives_for=alpha_tauri,
                       drived_for=[red_bull],
                       got_podium=[baku_2021],
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021]
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      born_in=france
                       )
 yuki_tsunoda = Driver("Yuki Tsonoda", competes_in_season=s2022, drives_for=alpha_tauri,
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021]
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      teammate=pierre_gasly,
+                      born_in=japan
                       )
 
 fernando_alonso = Driver("Fernando Alonso", competes_in_season=s2022, drives_for=alpine,
@@ -194,173 +278,162 @@ fernando_alonso = Driver("Fernando Alonso", competes_in_season=s2022, drives_for
                          got_podium=[qatar_2021],
                          is_wdc=[s2005, s2006],
                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                                  baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                  hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                  russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                  qatar_2021, saudi_2021, abu_dhabi_2021]
+                                   baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                   hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                   russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                   qatar_2021, saudi_2021, abu_dhabi_2021],
+                         born_in=spain
                          )
 esteban_ocon = Driver("Esteban Ocon", competes_in_season=s2022, drives_for=alpine,
                       drived_for=[aston_martin],
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021],
-                      won_race=[hungarian_2021]
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      won_race=[hungarian_2021],
+                      teammate=fernando_alonso,
+                      born_in=france
                       )
 
 sebastian_vettel = Driver("Sebastian Vettel", competes_in_season=s2022, drives_for=aston_martin,
                           drived_for=[alpha_tauri, red_bull, ferrari],
                           got_podium=[baku_2021],
                           is_wdc=[s2010, s2011, s2012, s2013],
-                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                                   baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                   hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                   russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                   qatar_2021, saudi_2021, abu_dhabi_2021]
+                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
+                                    monaco_2021,
+                                    baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                    hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                    russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                    qatar_2021, saudi_2021, abu_dhabi_2021],
+                          born_in=germany
                           )
 lance_stroll = Driver("Lance Stroll", competes_in_season=s2022, drives_for=aston_martin,
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021]
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      teammate=sebastian_vettel,
+                      born_in=canada
                       )
 
 charles_leclerc = Driver("Charles Leclerc", competes_in_season=s2022, drives_for=ferrari,
                          drived_for=[alfa_romeo], got_podium=[british_2021],
                          got_pole=[monaco_2021_q, baku_2021_q],
                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                                  baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                  hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                  russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                  qatar_2021, saudi_2021, abu_dhabi_2021]
+                                   baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                   hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                   russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                   qatar_2021, saudi_2021, abu_dhabi_2021],
+                         ahead_in_championship=[lewis_hamilton],
+                         born_in=monaco
                          )
 carlos_sainz = Driver("Carlos Sainz", competes_in_season=s2022, drives_for=ferrari,
                       drived_for=[alpha_tauri, alpine, mclaren],
-                      got_podium=[monaco_2021, hungarian_2021, russia_2021, abu_dhabi_2021],
+                      got_podium=[monaco_2021, hungarian_2021,
+                                  russia_2021, abu_dhabi_2021],
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021, monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021]
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      teammate=charles_leclerc,
+                      born_in=spain
                       )
 
-nikita_mazepin = Driver("Nikita Mazepin", competes_in_season=s2022, drives_for=haas,
-                           raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                                    monaco_2021,
-                                    baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                    hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                    russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                    qatar_2021, saudi_2021, abu_dhabi_2021],
-                           sponsored_by=[uralkali]
-                           )
+kevin_magnussen = Driver("Kevin Magnussen", competes_in_season=s2022, drives_for=haas,
+                         born_in=denmark)
 mick_schumacher = Driver("Mick Schumacher", competes_in_season=s2022, drives_for=haas,
                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                                  monaco_2021,
-                                  baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                  hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                  russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                  qatar_2021, saudi_2021, abu_dhabi_2021])
-
-daniel_ricciardo = Driver("Daniel Ricciardo", competes_in_season=s2022, drives_for=mclaren,
-                          drived_for=[alpha_tauri, red_bull],
-                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
                                    monaco_2021,
                                    baku_2021, france_2021, styria_2021, austria_2021, british_2021,
                                    hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
                                    russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
                                    qatar_2021, saudi_2021, abu_dhabi_2021],
-                          won_race=[italy_2021]
+                         teammate=kevin_magnussen, born_in=germany)
+
+daniel_ricciardo = Driver("Daniel Ricciardo", competes_in_season=s2022, drives_for=mclaren,
+                          drived_for=[alpha_tauri, red_bull],
+                          raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
+                                    monaco_2021,
+                                    baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                    hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                    russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                    qatar_2021, saudi_2021, abu_dhabi_2021],
+                          won_race=[italy_2021], born_in=australia
                           )
 lando_norris = Driver("Lando Norris", competes_in_season=s2022, drives_for=mclaren,
-                      got_podium=[imola_2021, monaco_2021, austria_2021, italy_2021],
+                      got_podium=[imola_2021, monaco_2021,
+                                  austria_2021, italy_2021],
                       got_pole=[russia_2021_q],
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                               monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021]
+                                monaco_2021,
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      teammate=daniel_ricciardo, born_in=united_kingdom
                       )
-
-lewis_hamilton = Driver("Lewis Hamilton", competes_in_season=s2022, drives_for=mercedes,
-                        drived_for=[mclaren],
-                        got_podium=[imola_2021,
-                                    france_2021, styria_2021,
-                                    hungarian_2021, belgium_2021, netherlands_2021,
-                                    us_2021, mexico_2021, abu_dhabi_2021],
-                        got_pole=[imola_2021_q, spain_2021_q, hungarian_2021_q, qatar_2021_q,
-                                  saudi_2021_q],
-                        is_wdc=[s2008, s2014, s2015, s2017, s2018, s2019, s2020],
-                        raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                                 monaco_2021,
-                                 baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                 hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                 russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                 qatar_2021, saudi_2021, abu_dhabi_2021],
-                        won_race=[bahrain_2021, portugal_2021, spain_2021, british_2021,
-                                  russia_2021, brazil_2021,
-                                  qatar_2021, saudi_2021]
-                        )
-george_russell = Driver("George Russell", competes_in_season=s2022, drives_for=mercedes,
-                        drived_for=[williams],
-                        raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                                 monaco_2021,
-                                 baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                 hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                 russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                 qatar_2021, saudi_2021, abu_dhabi_2021])
 
 max_verstappen = Driver("Max Verstappen", competes_in_season=s2022, drives_for=red_bull,
                         drived_for=[alpha_tauri],
                         got_podium=[bahrain_2021, portugal_2021, spain_2021,
-                                 russia_2021, turkey_2021, brazil_2021,
-                                 qatar_2021, saudi_2021],
+                                    russia_2021, turkey_2021, brazil_2021,
+                                    qatar_2021, saudi_2021],
                         got_pole=[bahrain_2021_q, imola_2021_q, portugal_2021_q, spain_2021_q,
-                                 monaco_2021_q, baku_2021_q, france_2021_q, styria_2021_q,
+                                  monaco_2021_q, baku_2021_q, france_2021_q, styria_2021_q,
                                   austria_2021_q, british_2021_q,
-                                 hungarian_2021_q, belgium_2021_q, netherlands_2021_q, italy_2021_q,
-                                 russia_2021_q, turkey_2021_q, us_2021_q, mexico_2021_q, brazil_2021_q,
-                                 qatar_2021_q, saudi_2021_q, abu_dhabi_2021_q],
+                                  hungarian_2021_q, belgium_2021_q, netherlands_2021_q,
+                                  italy_2021_q,
+                                  russia_2021_q, turkey_2021_q, us_2021_q, mexico_2021_q,
+                                  brazil_2021_q,
+                                  qatar_2021_q, saudi_2021_q, abu_dhabi_2021_q],
                         raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                                 monaco_2021,
-                                 baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                                 hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                 russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                 qatar_2021, saudi_2021, abu_dhabi_2021],
+                                  monaco_2021,
+                                  baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                  hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                  russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                  qatar_2021, saudi_2021, abu_dhabi_2021],
                         is_wdc=[s2021],
                         won_race=[imola_2021, monaco_2021, france_2021, styria_2021, austria_2021,
-                                 belgium_2021, netherlands_2021, us_2021, mexico_2021, abu_dhabi_2021],
+                                  belgium_2021, netherlands_2021, us_2021, mexico_2021,
+                                  abu_dhabi_2021],
+                        ahead_in_championship=[charles_leclerc], born_in=netherlands
                         )
 sergio_perez = Driver("Sergio Perez", competes_in_season=s2022, drives_for=red_bull,
                       drived_for=[alfa_romeo, mclaren, aston_martin],
-                      got_podium=[france_2021, turkey_2021, us_2021, mexico_2021],
+                      got_podium=[france_2021, turkey_2021,
+                                  us_2021, mexico_2021],
                       raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                               monaco_2021,
-                               baku_2021, france_2021, styria_2021, austria_2021, british_2021,
-                               hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                               russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                               qatar_2021, saudi_2021, abu_dhabi_2021],
-                      won_race=[baku_2021]
+                                monaco_2021,
+                                baku_2021, france_2021, styria_2021, austria_2021, british_2021,
+                                hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                qatar_2021, saudi_2021, abu_dhabi_2021],
+                      won_race=[baku_2021],
+                      teammate=max_verstappen, born_in=mexico
                       )
 
 nicholas_latifi = Driver("Nicholas Latifi", competes_in_season=s2022, drives_for=williams,
-                            raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
-                                     monaco_2021,
-                                     baku_2021, france_2021, styria_2021, austria_2021,
-                                     british_2021,
-                                     hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
-                                     russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
-                                     qatar_2021, saudi_2021, abu_dhabi_2021],
-                            sponsored_by=[lavazza]
-                            )
+                         raced_at=[bahrain_2021, imola_2021, portugal_2021, spain_2021,
+                                   monaco_2021,
+                                   baku_2021, france_2021, styria_2021, austria_2021,
+                                   british_2021,
+                                   hungarian_2021, belgium_2021, netherlands_2021, italy_2021,
+                                   russia_2021, turkey_2021, us_2021, mexico_2021, brazil_2021,
+                                   qatar_2021, saudi_2021, abu_dhabi_2021],
+                         sponsored_by=[lavazza], born_in=canada
+                         )
 alexander_albon = Driver("Alexander Albon", competes_in_season=s2022, drives_for=williams,
-                         drived_for=[alpha_tauri, red_bull])
+                         drived_for=[alpha_tauri, red_bull],
+                         teammate=nicholas_latifi, born_in=thailand)
 
 # Reserve Drivers
-sebastien_buemi = ReserveDriver("Sebastien Buemi", reserve_driver_for=[red_bull])
-antonio_giovinazzi = ReserveDriver("Antonio Giovinazzi", reserve_driver_for=[ferrari])
+sebastien_buemi = ReserveDriver(
+    "Sebastien Buemi", reserve_driver_for=[red_bull])
+antonio_giovinazzi = ReserveDriver(
+    "Antonio Giovinazzi", reserve_driver_for=[ferrari])
 oscar_piastri = ReserveDriver("Oscar Piastri", reserve_driver_for=[alpine])
 
 # Team Principals
@@ -377,14 +450,12 @@ jost_capito = TeamPrincipal("Jost Capito", works_for=williams)
 
 onto.save()
 
+# print(f"Fernando Alonso is {fernando_alonso.is_a[0]}")
+# print(f"Nikita Mazepin is {nikita_mazepin.is_a[0]}")
 
-print(f"Lewis Hamilton is {lewis_hamilton.is_a[0]}")
-print(f"Nikita Mazepin is {nikita_mazepin.is_a[0]}")
+# inferences = get_ontology("http://test.org/onto_inferences.owl")
+# with inferences:
+#     sync_reasoner_pellet()
 
-inferences = get_ontology("http://test.org/onto_inferences.owl")
-with inferences:
-     sync_reasoner_pellet()
-
-print(f"Lewis Hamilton is {lewis_hamilton.is_a[0]}")
-print(f"Nikita Mazepin is {nikita_mazepin.is_a[0]}")
-
+# print(f"Fernando Alonso is {fernando_alonso.is_a[0]}")
+# print(f"Nikita Mazepin is {nikita_mazepin.is_a[0]}")

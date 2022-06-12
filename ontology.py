@@ -6,6 +6,9 @@ with onto:
     class Personnel(Thing): pass
 
 
+    class Country (Thing): pass
+
+
     class Company(Thing): pass
 
 
@@ -87,6 +90,11 @@ with onto:
     class supplies(EngineSupplier >> Constructor): pass
 
 
+    class born_in(Driver >> Country, FunctionalProperty): pass
+
+    class based_in(Constructor >> Country, FunctionalProperty): pass
+
+
     class is_supplied_by(FunctionalProperty, Constructor >> EngineSupplier):
         inverse_property = supplies
 
@@ -104,6 +112,10 @@ with onto:
 
 
     class supplies_tyres(TyreManufacturer >> Constructor): pass
+
+    class teammate(Driver >> Driver, SymmetricProperty, FunctionalProperty): pass
+
+    class ahead_in_championship(Driver >> Driver, TransitiveProperty): pass
 
 
     class Driver(Thing):
